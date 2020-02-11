@@ -48,6 +48,8 @@ Todo o layout está hospedado no Zeplin neste link: https://zpl.io/25q7DKo
 
 ## Para rodar o projeto
 1. git clone
-2. npm install
-3. npm install axios
-4. npm start
+2. cd superagendador-front-end-test
+3. cd dev
+4. npm install
+5. npm axios
+6. npm start
