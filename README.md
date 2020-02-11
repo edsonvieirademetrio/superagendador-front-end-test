@@ -45,3 +45,9 @@ Todo o layout está hospedado no Zeplin neste link: https://zpl.io/25q7DKo
 
 ## Envio do teste
 1. Suba o repositório no seu Github e envie o link com o assunto: **Teste Front-End** para Juliano Baladão [jbaladao@gendo.com.br](mailto:jbaladao@gendo.com.br)
+
+## Para rodar o projeto
+1. git clone
+2. npm install
+3. npm install axios
+4. npm start
