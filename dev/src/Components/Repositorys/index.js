@@ -15,14 +15,8 @@ class Repositorys extends Component {
     reposCount: "",
     starred: false,
     starredNumber: '',
-    hasError: false 
   };
-
-  componentDidCatch(error) {
-    // Mostra uma UI alternativa
-    this.setState({ hasError: true });
-  }
-
+  
   searchRepo=(event)=>{
     let keyword = event.target.value;
     this.setState({search:keyword})
@@ -79,10 +73,6 @@ class Repositorys extends Component {
 
 
   render() {
-    if (this.state.hasError) {
-      // Você pode renderizar qualquer alternativa de UI
-      return <h1>Algo deu errado.</h1>;
-    }
     const { user, repos, profile, error, controlState, reposCount, starredNumber} = this.state
     if(controlState){
       return (      
@@ -93,10 +83,10 @@ class Repositorys extends Component {
             </nav>
             <main className="repo__tab--main text-left col-12 col-sm-12 col-md-12 col-lg-10 col-xl-10 pl-lg-5 pl-xl-5">
               <div className="repo__tab row" >
-                <div id="first" className="repo__tab--link col- col-sm- col-md-4 col-lg-2 col-xl-2 text-center" onClick={this.onRepos}>
+                <div id="first" className="repo__tab--link col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 text-center" onClick={this.onRepos}>
                   Repos <span className="repo__tab--count px-2">{reposCount}</span>
                 </div>
-                <div id="second" className="repo__tab--link col- col-sm- col-md-4 col-lg-2 col-xl-2 text-center" onClick={this.onStarred}>
+                <div id="second" className="repo__tab--link col-6 col-sm-6 col-md-4 col-lg-2 col-xl-2 text-center" onClick={this.onStarred}>
                   Starred <span className="repo__tab--count px-2">{starredNumber}</span>
                 </div>
               </div>
